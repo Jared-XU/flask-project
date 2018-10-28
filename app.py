@@ -22,7 +22,9 @@ class User(db.Model):
 
 @app.route('/')
 def index():
-    return render_template('add_user.html')
+    myUser = User.query.all()
+    oneItem = User.query.filter_by(username="test2").all()
+    return render_template('add_user.html', myUser=myUser, oneItem=oneItem)
 
 @app.route('/post_user', methods=['POST'])
 def post_user():
