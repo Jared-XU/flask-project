@@ -6,7 +6,6 @@ data: {
     datasets: [{
     label: 'Turnover Time',
     data: [47, 55, 45, 45, 53, 50, 49],
-    lineTension: 0,
     backgroundColor: 'transparent',
     borderColor: '#007bff',
     borderWidth: 4,

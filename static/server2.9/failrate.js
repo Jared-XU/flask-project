@@ -6,6 +6,7 @@ data: {
     datasets: [{
     label: 'Fail Rate',
     data: [20, 21, 19, 34, 17, 45, 22],
+    backgroundColor: 'rgba(255, 99, 132, 0.2)',
     lineTension: 0,
     borderColor: 'green',
     borderWidth: 4,
@@ -26,7 +27,7 @@ options: {
         beginAtZero: false,
         stepSize: 20,
         callback: function (value) {
-    return (value / this.max * 100).toFixed(0) + '%'; // convert it to percentage
+            return (value / this.max * 100).toFixed(0) + '%'; // convert it to percentage
         },
         },
         scaleLabel: {
@@ -36,8 +37,8 @@ options: {
     }]
     },
     legend: {
-    display: false,
-    position: 'right'
+        display: false,
+        position: 'right'
     }
 }
 });  
