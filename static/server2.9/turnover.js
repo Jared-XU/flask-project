@@ -4,13 +4,21 @@ type: 'line',
 data: {
     labels: ["02/11/2018", "03/11/2018", "04/11/2018", "05/11/2018", "06/11/2018", "07/11/2018", "08/11/2018"],
     datasets: [{
-    label: 'Turnover Time',
+    label: 'Server 2.9 Turnover Time',
     data: [47, 55, 45, 45, 53, 50, 49],
     backgroundColor: 'transparent',
-    borderColor: '#007bff',
+    borderColor: '#67abf5',
     borderWidth: 4,
-    pointBackgroundColor: '#007bff'
-    }]
+    pointBackgroundColor: '#67abf5'
+    }, {
+        label: 'Server 2.8 Turnover Time',
+        data: [44, 58, 49, 43, 52, 59, 69],
+        backgroundColor: 'transparent',
+        borderColor: '#de616d',
+        borderWidth: 4,
+        pointBackgroundColor: '#de616d'
+    }
+    ]   
 },
 options: {
     title: {
@@ -30,8 +38,7 @@ options: {
     }]
     },
     legend: {
-    display: false,
-    position: 'right'
+    display: true,
     }
 }
 });

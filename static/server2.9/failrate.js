@@ -4,14 +4,23 @@ type: 'line',
 data: {
     labels: ["02/11/2018", "03/11/2018", "04/11/2018", "05/11/2018", "06/11/2018", "07/11/2018", "08/11/2018"],
     datasets: [{
-    label: 'Fail Rate',
+    label: 'Server 2.9 Fail Rate',
     data: [20, 21, 19, 34, 17, 45, 22],
-    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+    backgroundColor: 'transparent',
     lineTension: 0,
-    borderColor: 'green',
+    borderColor: '#fd7e14',
     borderWidth: 4,
-    pointBackgroundColor: 'green'
-    }]
+    pointBackgroundColor: '#fd7e14'
+    }, {
+        label: 'Server 2.8 Fail Rate',
+        data: [22, 25, 23, 38, 32, 42, 25],
+        backgroundColor: 'transparent',
+        lineTension: 0,
+        borderColor: '#20c997',
+        borderWidth: 4,
+        pointBackgroundColor: '#20c997'
+    }
+    ]
 },
 options: {
     title: {
@@ -37,8 +46,8 @@ options: {
     }]
     },
     legend: {
-        display: false,
-        position: 'right'
+        display: true,
+        
     }
 }
 });  
