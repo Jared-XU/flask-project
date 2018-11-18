@@ -14,14 +14,14 @@
         var turnover_data = {
             labels: result1[0].labels,
             datasets: [{
-            label: 'Server 2.9 Turnover Time',
+            label: 'Server 2.9 (minutes)',
             data: result1[0].turnover,
             backgroundColor: 'transparent',
             borderColor: '#67abf5',
             borderWidth: 4,
             pointBackgroundColor: '#67abf5'
             }, {
-                label: 'Server 2.8 Turnover Time',
+                label: 'Server 2.8 (minutes)',
                 data: result2[0].turnover,
                 backgroundColor: 'transparent',
                 borderColor: '#de616d',
