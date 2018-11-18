@@ -61,11 +61,34 @@
         });
 
 
-        function addData() {
-            myChart.data.datasets[0].data[7] = 100;
-            myChart.data.labels[7] = "09/11/2018";
-            myChart.update();
-        }
+        // function addData() {
+        //     myChart.data.datasets[0].data[7] = 100;
+        //     myChart.data.labels[7] = "09/11/2018";
+        //     myChart.update();
+        // }
 
-        $("#update").on('click', addData);
+        // $("#update").on('click', addData);
     });
+
+
+    function generateRandomInteger(min, max) {
+        return Math.floor(min + Math.random()*(max + 1 - min))
+      }
+
+    function addData() {
+        var len = myChart.data.datasets[0].data.length
+        myChart.data.datasets[0].data[len] = generateRandomInteger(45, 65);
+        myChart.data.datasets[1].data[len] = generateRandomInteger(45, 65);
+        var d = new Date()
+        var label = d.toISOString();
+        myChart.data.labels[len] = label.slice(0, -5);
+        myChart.update();
+    }
+
+    $("#update").on('click', addData);
+    $("#stop").on('click', stopUpdate);
+    id = setInterval('addData();', 5000);
+
+    function stopUpdate() { 
+        clearInterval(id);
+     }

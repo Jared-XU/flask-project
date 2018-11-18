@@ -41,5 +41,17 @@ def turnover_2_8():
 def index():
     return render_template('index.html')
 
+@app.route('/deploy')
+def deploy():
+    return render_template('deploy.html')
+
+@app.route('/mttr')
+def mttr():
+    return render_template('mttr.html')
+
+@app.route('/build')
+def build():
+    return render_template('build.html')
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080, debug=True)
